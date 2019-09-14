@@ -21,7 +21,7 @@ retrain.check_for_gpu()
 data_path = 'D:/pupster-data/DATA/15-second'
 retrain.train(data_path)
 
-""" Show Training Loass & Accuracy Stats """
+""" Show Training Loss & Accuracy Stats """
 retrain.show_trainng_stats()
 
 """ Save the Model """

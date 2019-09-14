@@ -12,6 +12,9 @@ Purpose:
 
 from __future__ import absolute_import, division, print_function, unicode_literals
 
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' # suppress tensorflow verbosity
+
 import tensorflow as tf
 tf.enable_eager_execution()
 
@@ -124,7 +127,7 @@ class retrain:
         plt.ylim([0,1])
         plt.plot(self.callbacks.batch_acc)
         
-    def predict_with_interal(self, image):
+    def predict_with_internal(self, image):
         print('Predicting...')
         """ Use current model held in memory """
         t1 = time.time()
