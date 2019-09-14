@@ -110,7 +110,6 @@ class retrain:
                                       steps_per_epoch=steps_per_epoch,
                                       callbacks = [self.callbacks],
                                       verbose=1)
-        
         return self.callbacks
     
     def save_model(self, save_path='/tmp/saved_models/model_'):
@@ -151,7 +150,7 @@ class retrain:
         print('Time to Predict:', t2-t1, 'seconds')
         
         
-class predict_with_exteranl:
+class predict_with_external:
     """ Load a saved model """
     def __init__(self, model_path):
         self.model_path = model_path
