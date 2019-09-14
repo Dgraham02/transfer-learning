@@ -27,6 +27,14 @@ import numpy as np
 import time
 import cv2
 
+def check_pkg_versions():
+    print('tensorflow:', tf.__version__)
+    print('tensorflow_hub:', hub.__version__)
+    print('keras:', keras.__version__)
+    print('numpy:', np.__version__)
+    print('cv2:', cv2.__version__)
+    print('matplotlib.pylab:', plt.__version__)
+    
 class CollectBatchStats(tf.keras.callbacks.Callback):
     """ Used for capturing training statistics"""
     def __init__(self):
